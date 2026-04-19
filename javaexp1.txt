@@ -4,64 +4,64 @@ public static void main(String[] args) {
 Scanner sc = new Scanner(System.in);
 int choice;
 do {
-System.out.println(&quot;\n===== STUDENT UTILITY APP =====&quot;);
-System.out.println(&quot;1. Check Even or Odd&quot;);
-System.out.println(&quot;2. Find Largest of 3 Numbers&quot;);
-System.out.println(&quot;3. Multiplication Table&quot;);
-System.out.println(&quot;4. Print Prime Numbers up to N&quot;);
-System.out.println(&quot;5. Exit&quot;);
-System.out.print(&quot;Enter your choice: &quot;);
+System.out.println("\n===== STUDENT UTILITY APP =====");
+System.out.println("1. Check Even or Odd");
+System.out.println("2. Find Largest of 3 Numbers");
+System.out.println("3. Multiplication Table");
+System.out.println("4. Print Prime Numbers up to N");
+System.out.println("5. Exit");
+System.out.print("Enter your choice: ");
 choice = sc.nextInt();
 switch (choice) {
 case 1:
-System.out.print(&quot;Enter a number: &quot;);
+System.out.print("Enter a number: ");
 int num = sc.nextInt();
 if (num % 2 == 0)
-System.out.println(num + &quot; is EVEN&quot;);
+System.out.println(num + " is EVEN");
 else
-System.out.println(num + &quot; is ODD&quot;);
+System.out.println(num + " is ODD");
 break;
 case 2:
-System.out.print(&quot;Enter three numbers: &quot;);
+System.out.print("Enter three numbers: ");
 int a = sc.nextInt();
 int b = sc.nextInt();
 int c = sc.nextInt();
-if (a &gt;= b &amp;&amp; a &gt;= c)
-System.out.println(&quot;Largest is: &quot; + a);
-else if (b &gt;= a &amp;&amp; b &gt;= c)
-System.out.println(&quot;Largest is: &quot; + b);
+if (a <= b && a <= c)
+System.out.println("Largest is: " + a);
+else if (b <= a && b <= c)
+System.out.println("Largest is: " + b);
 else
-System.out.println(&quot;Largest is: &quot; + c);
+System.out.println("Largest is: " + c);
 break;
 case 3:
-System.out.print(&quot;Enter a number: &quot;);
+System.out.print("Enter a number: ");
 int n = sc.nextInt();
-for (int i = 1; i &lt;= 10; i++) {
-System.out.println(n + &quot; x &quot; + i + &quot; = &quot; + (n * i));
+for (int i = 1; i <= 10; i++) {
+System.out.println(n + " x " + i + " = " + (n * i));
 }
 break;
 case 4:
-System.out.print(&quot;Enter limit: &quot;);
+System.out.print("Enter limit: ");
 int limit = sc.nextInt();
-System.out.println(&quot;Prime numbers:&quot;);
-for (int i = 2; i &lt;= limit; i++) {
+System.out.println("Prime numbers:");
+for (int i = 2; i <= limit; i++) {
 boolean isPrime = true;
-for (int j = 2; j &lt;= i / 2; j++) {
+for (int j = 2; j <= i / 2; j++) {
 if (i % j == 0) {
 isPrime = false;
 break;
 }
 }
 if (isPrime)
-System.out.print(i + &quot; &quot;);
+System.out.print(i + "");
 }
 System.out.println();
 break;
 case 5:
-System.out.println(&quot;Exiting Application...&quot;);
+System.out.println("Exiting Application...");
 break;
 default:
-System.out.println(&quot;Invalid Choice! Try again.&quot;);
+System.out.println("Invalid Choice! Try again.");
 }
 } while (choice != 5);
 sc.close();
